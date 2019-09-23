@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+    xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+    mc:Ignorable="d"
+    x:Class="MyMap.MainPage">
+
+    <StackLayout
+        Orientation="Vertical">
+        <Image
+            Source="http://media.comicbook.com/2018/02/marvel-studios-first-10-years-banner-1081327.jpeg"
+            HeightRequest="130"
+            Aspect="AspectFill" />
+        <controls:SegmentedControl
+            x:Name="mSegControl"
+            HeightRequest="30"
+            TintColor="#007AFF"
+            SelectedSegment="0"
+            Margin="20, 0">
+            <controls:SegmentedControl.Children>
+                <controls:SegmentedControlOption
+                    Text="Normal" />
+                <controls:SegmentedControlOption
+                    Text="Satellite" />
+                <controls:SegmentedControlOption
+                    Text="Hybrid" />
+            </controls:SegmentedControl.Children>
+        </controls:SegmentedControl>
+        <Button
+            x:Name="TrackingButton"
+            Margin="20, 8"
+            BackgroundColor="#c0d0e0"/>
+        <maps:Map
+            x:Name="map" />
+    </StackLayout>
+
+
+
+</ContentPage>
